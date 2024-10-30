@@ -18,10 +18,24 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.jdc308.Pokedex"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "317239e1-59d9-419c-acc1-426b4eafb659"
+      }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/PixeloidMono-d94EV.ttf"]
+        }
+      ]
+    ]
   }
 }
