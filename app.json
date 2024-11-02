@@ -12,9 +12,12 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "buildNumber": "1.0.0",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jrs460.Pokedex"
     },
     "android": {
+      "buildNumber": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -24,18 +27,20 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {
-      "eas": {
-        "projectId": "317239e1-59d9-419c-acc1-426b4eafb659"
-      }
-    },
     "plugins": [
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/PixeloidMono-d94EV.ttf"]
+          "fonts": [
+            "./assets/fonts/PixeloidMono-d94EV.ttf"
+          ]
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "d4a126ea-c142-4a45-8de4-aaeb222b7adb"
+      }
+    }
   }
 }

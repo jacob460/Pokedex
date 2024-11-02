@@ -1,8 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import Sound from 'react-native-sound';
-import { Pressable, StyleSheet, Text, View, Button, Image, FlatList, TextInput, TouchableOpacity, Keyboard
-} from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import { Pressable, StyleSheet, Text, View, Image} from 'react-native';
 
 function Card (props) {
 

@@ -1,5 +1,4 @@
 import { useFonts } from 'expo-font';
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -11,20 +10,22 @@ import Details from './screens/Details';
 import Favorites from './screens/Favorites';
 import List from './screens/List';
 import Settings from './screens/Settings';
+import CustDrawer from './components/CustDrawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { store, persistor } from './store/redux/store';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
-
 const RenderDrawer = () => {
-  return ( <Drawer.Navigator>
-    <Drawer.Screen name="Home" component={Home} />
-    <Drawer.Screen name="Pokemon List" component={List} />
-    <Drawer.Screen name="Favorites" component={Favorites} />
-    <Drawer.Screen name="Settings" component={Settings} />
-  </Drawer.Navigator>);
+  return (
+    <Drawer.Navigator drawerContent={(props) => <CustDrawer {...props}/>}>
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Pokemon List" component={List} />
+        <Drawer.Screen name="Favorites" component={Favorites} />
+        <Drawer.Screen name="Settings" component={Settings} />
+    </Drawer.Navigator>
+);
 }
 
 
@@ -36,14 +37,19 @@ export default function App() {
     'PixeloidMono' : require('./assets/fonts/PixeloidMono-d94EV.ttf'),
   });
 
+  if(!loaded && !error)
+    {
+      return null;
+    }
+
   return (
     <Provider store={store}>
       <PersistGate loading={<Text>Loading...</Text>} persistor={persistor}>
         <NavigationContainer>
           <Stack.Navigator initialRouteName="AppHome">   
-            <Stack.Screen name="AppHome" component={RenderDrawer} options={{headerShown: false}}/>
-            <Stack.Screen name="List" component={List} options={{headerShown: false}}/>
-            <Stack.Screen name="Details" component={Details} />
+          <Stack.Screen name="AppHome" component={RenderDrawer} options={{headerShown: false}}/>
+          <Stack.Screen name="List" component={List} options={{headerShown: false}}/>
+          <Stack.Screen name="Details" component={Details} />
           </Stack.Navigator>  
         </NavigationContainer>
       </PersistGate>

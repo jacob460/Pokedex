@@ -1,6 +1,6 @@
-import { Pressable, View, Text, StyleSheet, ScrollView, Image, Button } from "react-native";
+import { View, Text, StyleSheet} from "react-native";
 
-function Settings(props) {
+function Settings() {
 
 
     return <View style={styles.container}>

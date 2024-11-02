@@ -1,18 +1,19 @@
-import { Pressable, View, Text, StyleSheet, ScrollView, Image, Button } from "react-native";
+import { View, StyleSheet, ImageBackground } from "react-native";
 
-function Home(props) {
+function Home() {
 
 
-    return <View style={styles.container}>
-            <Text style={styles.header}>Home</Text>
-        </View>
+    return(
+      <View style={styles.container}>
+        <ImageBackground style={{flex:1,}} resizeMode='stretch' source={require('../assets/Pokedex_logo.png')}/>
+      </View>
         
-}
+)};
 
 const styles = StyleSheet.create({
     container: {
-      alignItems: 'center',
-      justifyContent: 'top',
+      flex:1,
+      backgroundColor: 'yellow',
     },
     header: {
       textAlign: 'center',
