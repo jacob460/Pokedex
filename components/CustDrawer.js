@@ -10,7 +10,7 @@ function CustDrawer({navigation}){
         <DrawerContentScrollView style={{backgroundColor: "red",}}>
               <Pressable onPress={() => navigation.navigate('Home')}>
                 <View style={styles.container}>
-                    <Image style={styles.itemImage} resizeMode='contain' source={require('../assets/Pokedex_logo.png')}/>
+                    <Image style={styles.itemImage} resizeMode='contain' source={require('../assets/pokedex_logo.png')}/>
                     <Text style={styles.itemText}>Home</Text>
                 </View>
             </Pressable>

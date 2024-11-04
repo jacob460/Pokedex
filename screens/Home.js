@@ -5,7 +5,7 @@ function Home() {
 
     return(
       <View style={styles.container}>
-        <ImageBackground style={{flex:1,}} resizeMode='stretch' source={require('../assets/Pokedex_logo.png')}/>
+        <ImageBackground style={{flex:1,}} resizeMode='stretch' source={require('../assets/pokedex_logo.png')}/>
       </View>
         
 )};

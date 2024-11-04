@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.jdc308.Pokedex"
+      "package": "com.jrs460.Pokedex"
     },
     "web": {
       "favicon": "./assets/favicon.png"
